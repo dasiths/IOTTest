@@ -42,6 +42,7 @@ namespace IOTTest
         {
             txtOutput.Text = txtOutput.Text + Environment.NewLine + s;
             txtOutput.SelectionStart = txtOutput.Text.Length - 1;
+            txtOutput.ScrollToCaret();
         }
 
         private async void btnAddDevice_Click(object sender, EventArgs e)
