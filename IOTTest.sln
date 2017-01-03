@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26014.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOTTest", "IOTTest\IOTTest.csproj", "{749664BD-49DC-415C-87F4-CED8F6CF6328}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppRecieve", "ConsoleAppRecieve\ConsoleAppRecieve.csproj", "{FF42B68C-FDAA-4FA4-9152-A6C2751D379D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{749664BD-49DC-415C-87F4-CED8F6CF6328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{749664BD-49DC-415C-87F4-CED8F6CF6328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{749664BD-49DC-415C-87F4-CED8F6CF6328}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF42B68C-FDAA-4FA4-9152-A6C2751D379D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF42B68C-FDAA-4FA4-9152-A6C2751D379D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF42B68C-FDAA-4FA4-9152-A6C2751D379D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF42B68C-FDAA-4FA4-9152-A6C2751D379D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

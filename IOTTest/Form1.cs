@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Microsoft.Azure.Devices;
 using Microsoft.Azure.Devices.Client;
 using Microsoft.Azure.Devices.Common.Exceptions;
+using Microsoft.ServiceBus;
 using Microsoft.ServiceBus.Messaging;
 using Newtonsoft.Json;
 using Message = Microsoft.Azure.Devices.Client.Message;
@@ -66,6 +67,8 @@ namespace IOTTest
         {
             btnListen.Enabled = false;
 
+            ServiceBusEnvironment.SystemConnectivity.Mode = ConnectivityMode.Http;
+
             WriteToOutput("Receive messages.");
             eventHubClient = EventHubClient.CreateFromConnectionString(connectionString, iotHubD2cEndpoint);
 
@@ -105,6 +108,14 @@ namespace IOTTest
 
         #region "Send"
 
+        private async void btnSend_Click(object sender, EventArgs e)
+        {
+            WriteToOutput("Simulated device\n");
+            deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey("myFirstDevice", deviceKey), TransportType.Http1);
+
+            await SendDeviceToCloudMessagesAsync();
+        }
+
         private async Task SendDeviceToCloudMessagesAsync()
         {
             double avgWindSpeed = 10; // m/s
@@ -127,14 +138,6 @@ namespace IOTTest
 
                 Task.Delay(1000).Wait();
             }
-        }
-
-        private async void btnSend_Click(object sender, EventArgs e)
-        {
-            WriteToOutput("Simulated device\n");
-            deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey("myFirstDevice", deviceKey), TransportType.Mqtt);
-
-            await SendDeviceToCloudMessagesAsync();
         }
 
         #endregion
