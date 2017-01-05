@@ -62,7 +62,7 @@ namespace IOTTest
             WriteToOutput("Generated device key: " + device.Authentication.SymmetricKey.PrimaryKey);
         }
 
-        #region "Recieve"
+        #region "Receive"
 
         private async void btnListen_Click(object sender, EventArgs e)
         {
