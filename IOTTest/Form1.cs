@@ -21,6 +21,8 @@ namespace IOTTest
 {
     public partial class Form1 : Form
     {
+    
+        //See tutorial at https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-getstarted
         static RegistryManager registryManager;
         static string connectionString = "HostName=DasithIOTHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=ShSXR0KjrGZL98aSiTWh/IrJTxBYo6AIfbXJQvnVGwU=";
 
